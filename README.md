@@ -2,7 +2,7 @@
 
 The present repository contains the solutions in main.ipynb to the 4th ADM assignment for the year 2024/2025.
 
-### Collaborators (Group 12):
+#### Collaborators (Group 12):
 - Leonardo Rocci (cycileo)
 - Emre Yesil (1emreyesil)
 - Antonio Pagnotta (AntonioPagnotta)
