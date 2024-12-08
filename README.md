@@ -8,7 +8,7 @@ The present repository contains the solutions in main.ipynb to the 4th ADM assig
 - Antonio Pagnotta (AntonioPagnotta)
 - Zuzana Miciakova (Bioinf-Suzy)
 
-## Task:
+## Task: Movie Recommendation System
 ## Section 1. Recommendation System with LSH
 
 In this section, you will implement a recommendation system by identifying users with similar preferences and suggesting movies based on their behavior. Specifically, you will implement your version of the LSH algorithm.
