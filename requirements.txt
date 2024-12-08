@@ -1,0 +1,15 @@
+IPython
+pandas
+numpy
+nbclient
+scikit-learn
+matplotlib
+yellowbrick
+plotly
+seaborn
+gdown
+sympy
+ipywidgets
+imageio
+statistics
+tqdm
