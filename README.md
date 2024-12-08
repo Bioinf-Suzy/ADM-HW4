@@ -2,22 +2,22 @@
 
 The present repository contains the solutions in main.ipynb to the 4th ADM assignment for the year 2024/2025.
 
-Collaborators (Group 12):
+##### Collaborators (Group 12):
 - Leonardo Rocci (cycileo)
 - Emre Yesil (1emreyesil)
 - Antonio Pagnotta (AntonioPagnotta)
 - Zuzana Miciakova (Bioinf-Suzy)
 
-Task:
-1. Recommendation System with LSH
+## Task:
+### Section 1. Recommendation System with LSH
 
 In this section, you will implement a recommendation system by identifying users with similar preferences and suggesting movies based on their behavior. Specifically, you will implement your version of the LSH algorithm.
 
-1.1 Data Preparation
+#### 1.1 Data Preparation
 
 Download the MovieLens dataset from here. After downloading, explore the dataset to understand the structure and identify any preprocessing steps needed.
 
-1.2 Minhash Signatures
+#### 1.2 Minhash Signatures
 
 Using the userId and movieId columns, implement your own MinHash function. This function will hash each user's watched movie list, creating a representation that allows for quick comparisons of user similarities.
 
@@ -25,7 +25,8 @@ Important: Implement your MinHash function from scratch—do not use any pre-bui
 Use your MinHash function to generate signature vectors for each user based on their rated movies.
 Experiment with different hash functions and threshold values to find the most effective configurations. Report these results.
 Read the class materials and, if necessary, conduct an internet search. The description of hash functions in the book may be helpful as a reference.
-1.3 Locality-Sensitive Hashing (LSH)
+
+#### 1.3 Locality-Sensitive Hashing (LSH)
 
 Now that you have generated MinHash user signatures, apply Locality-Sensitive Hashing (LSH) to cluster similar users.
 
@@ -57,11 +58,11 @@ If User A and User B are identified as the two most similar users to User X, the
 Common Movies: "Inception" (average rating: 4.55).
 Top-rated from Most Similar User: "Toy Story" (4.7) from User B and "Titanic" (4.2) from User A.
 If fewer than 5 movies are found, complete the list using other high-rated movies by the most similar users.
-2. Grouping Movies Together!
+### Section 2. Grouping Movies Together!
 
 In this section, you will explore clustering algorithms to group the movies you have based on specific features you choose to consider for them.
 
-2.1 Feature Engineering
+#### 2.1 Feature Engineering
 
 As you know, the dataset provided isn’t particularly clean or well-structured to represent the features of the movies. Therefore, your first step is to create a more suitable set of attributes (variables, features, covariates) to represent the movies based on the available information. Here are some variables or features you might consider for clustering:
 
@@ -74,7 +75,7 @@ In addition to the above features, include at least three additional features fo
 
 Note: If you have accurately identified and applied the methods for representing the features, you should have more than eight features! How could this happen? Take a moment to think about it.
 
-2.2 Choose your features (variables)!
+#### 2.2 Choose your features (variables)!
 
 With multiple features available for the movies, you need to consider the following two questions: 1. Should you normalize the data or leave it as is? 2. Should you include all these features, or can you reduce the dimensionality of the data?
 
@@ -82,7 +83,8 @@ What is the importance of normalizing the data in your analysis, and how does it
 If you find that normalizing the values is beneficial, please proceed to normalize the data. To simplify this task, refer to the scikit-learn package for tools and functions that facilitate data normalization.
 Could you provide some insights on dimensionality reduction? What techniques would be effective for reducing the number of features in the dataset, and why might this be beneficial for the analysis?
 If you believe dimensionality reduction would be advantageous, please select a method to reduce the dimensionality of the data.
-2.3 Clustering
+
+#### 2.3 Clustering
 
 Now that you have prepared the data, you can create the clusters.
 
@@ -90,7 +92,8 @@ How can you determine the optimal number of clusters for your data? Please use a
 Implement the K-means clustering algorithm (not K-means++) through MapReduce. We request that you develop the algorithm from scratch based on what you've learned in class and run the algorithm on your data.
 Implement the K-means++ algorithm from scratch and apply it to your data. Do you notice any differences between the results obtained using random initialization and those achieved with K-means++? Please explain your observations and discuss why these differences might occur.
 Ask an LLM (ChatGPT, Claude AI, Gemini, Perplexity, etc.) to recommend another clustering algorithm. Use that LLM to describe the workings of the algorithm, as well as its advantages and disadvantages compared to K-means and K-means++. Additionally, ask to implement the algorithm for you or utilize an existing version from a package. Apply that algorithm to your data and explain any differences you observe in the results compared to those obtained previously.
-2.4 Best Algorithm
+
+#### 2.4 Best Algorithm
 
 Clustering helps identify natural groupings within data, but no single algorithm works best for every dataset. In this section, you’ll learn how to choose the most suitable clustering method based on your data’s unique characteristics. By analyzing patterns and comparing results, you’ll uncover which algorithm provides the most meaningful insights and clusters.
 
@@ -107,14 +110,15 @@ o
 p
 t
  clusters. Then, evaluate each model's clustering quality using the selected metrics. Summarize your findings by comparing the results of each algorithm based on the metric evaluations.
-3. Bonus Question
+
+### Section 3. Bonus Question
 
 K-means is an iterative algorithm, meaning that with each iteration, it refines the clusters by adjusting them based on the distance of each data point relative to the center of each cluster. This process continues until it reaches a point of convergence or hits a set limit on the number of iterations. You might want to track the progress of forming your clusters.
 
 Select two variables* from your instances to display them on a 2D plot. Then, illustrate the progression of the clusters as they change at each iteration. We expect a plot for each iteration, displaying the instances and the clusters they belong to. Select the two features that most effectively separate visual instances belonging to different clusters. Explain the method you used to determine these features.
 *Note: Depending on the variables you want to use for clustering, whether they are the original movie features or the components derived from PCA, you may select two features/components that best help to visually display the clusters.
 
-4. Algorithmic Question
+### Section 4. Algorithmic Question
 
 Two brilliant strategists, Arya and Mario, are about to play a game with a sequence of numbers. Arya, as player 1, begins the game, while Mario, player 2, plays 2nd. Their goal is clear: to collect the highest possible score by taking numbers from either end of the sequence, one at a time. They will play in perfect synchronicity, each seeking the advantage.
 
